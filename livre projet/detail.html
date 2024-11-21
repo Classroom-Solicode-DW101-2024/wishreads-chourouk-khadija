@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>detail</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="./img/logo.jpg" alt="">
+        <h1>Le Coin Littéraire</h1>
+    
+    <nav>
+        <ul>  
+          <li><a href="index.html/">Liste</a ></li>
+          <!-- <li><a href="pages/detail.html">Détails</a></li> -->
+          <li><a href="favorie.html">Livres Favoris</a></li>
+        </ul>
+    </nav>
+    
+</header>
+
+    
+<main class="itemdetail" id="detail">
+
+</main>
+
+<div class="div1">
+    <div>
+        <img src="img/logo.jpg" alt="logo" id="logo">
+        <h3>Le Coin Littéraire</h3>
+        <h2>Home</h2>
+        <p>Liste</p>
+        <p>Livres Favoris</p>
+    </div>
+    <div style="margin: 0 auto;">
+        <div><img src="img/email.png" class="div2">
+        <h5 class="div2">CoinLittéraire@gmail.com</h5></div>
+        <div><img src="img/phone.png" class="div3">
+        <h5 class="div3">+121 857220-705</h5></div>
+        <div><img src="img/localisation.png" class="div4">
+        <h5 class="div4">131 Dartmouth St.Boston, MA 02116</h5> </div>
+    </div>
+</div>
+<div style="text-align: right; background-color: white;width: 100%;">
+    <img src="img/insta.png" alt="insta" class="img-icon">
+    <img src="img/discord.png" alt="discord" class="img-icon"> 
+    <img src="img/twitre.png" alt="twitre" class="img-icon"> 
+ </div>
+
+
+</body>
+<script>
+ const selectedBook = JSON.parse(localStorage.getItem('selectedBook'));
+        // if (selectedBook) {
+            const detail = document.getElementById('detail');
+            const div = document.createElement('div');
+            div.classList.add('divdetail','itemdetail');
+            div.innerHTML = `
+                <p>titel : ${selectedBook.title}</p>
+                <p>Auteur: ${selectedBook.author.fullname}</p>
+                <p>description: ${selectedBook.description}</p>
+                <p>topographie: ${selectedBook.author.topographie}</p>  
+                <p>Date de publication: ${selectedBook.releaseDate}</p>  
+            `;
+            const buttonPdf=document.createElement('p');
+            buttonPdf.innerHTML=`
+            <input id="detailPdf" type="button" value="PDF">
+            `
+            buttonPdf.classList.add('buttonPdf','itemdetail');
+            buttonPdf.onclick = function(){
+        window.open(selectedBook.linkpdf,'_blank');
+            };
+            const bookImg = document.createElement('img');
+            bookImg.classList.add('imgdetail','itemdetail');  
+             bookImg.src = selectedBook.cover;
+             detail.appendChild(bookImg);
+             detail.appendChild(div);
+             div.appendChild(buttonPdf);
+             
+ // }
+</script>
+</html>

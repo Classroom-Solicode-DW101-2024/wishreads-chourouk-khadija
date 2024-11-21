@@ -1,0 +1,118 @@
+{
+    "books" : [
+        
+            {
+              "title": "Les Misérables",
+              "description": "Un roman historique et social qui explore la lutte pour la justice sociale dans la France du XIXe siècle.",
+              "cover":  "img/Les Misérables.jpg",
+              "linkpdf": "https://freeclassicebooks.com/Victor%20Hugo/Les%20Miserables.pdf",
+              "author": {
+                "fullname": "Victor Hugo",
+                "topographie": "France"
+              },
+              "releaseDate": "1862-04-03"
+            },
+            {
+              "title": "Madame Bovary",
+              "description": "L'histoire tragique d'une femme provinciale désillusionnée, piégée par ses propres rêves romantiques.",
+              "cover": "img/Madame Bovary.jpg",
+              "linkpdf": "https://ebooks-bnr.com/ebooks/pdf4/flaubert_madame_bovary.pdf",
+              "author": {
+                "fullname": "Gustave Flaubert",
+                "topographie": "France"
+              },
+              "releaseDate": "1857-12-15"
+            },
+            {
+              "title": "Le Rouge et le Noir",
+              "description": "Le parcours ambitieux de Julien Sorel, jeune provincial, dans une société française dominée par la politique et la religion.",
+              "cover": "img/Le Rouge et le Noir.jpg",
+              "linkpdf": "https://example.com/rouge_noir.pdf",
+              "author": {
+                "fullname": "Stendhal",
+                "topographie": "France"
+              },
+              "releaseDate": "1830-11-13"
+            },
+            {
+              "title": "Le Père Goriot",
+              "description": "Un drame de famille et d'ambition dans le Paris du XIXe siècle, dévoilant la nature des relations humaines.",
+              "cover": "img/Le Père Goriot",
+              "linkpdf": "https://www.texteslibres.fr/le-rouge-et-le-noir/un-maire-1189.html",
+              "author": {
+                "fullname": "Honoré de Balzac",
+                "topographie": "France"
+              },
+              "releaseDate": "1835-06-14"
+            },
+            {
+              "title": "Candide",
+              "description": "Un conte philosophique satirique sur l'optimisme, suivant le personnage naïf de Candide à travers ses aventures.",
+              "cover": "img/Germinal.jpg",
+              "linkpdf": "https://candide.bnf.fr/candide.pdf",
+              "author": {
+                "fullname": "Voltaire",
+                "topographie": "France"
+              },
+              "releaseDate": "1759-01-01"
+            },
+            {
+              "title": "L'Étranger",
+              "description": "Un roman existentialiste sur l'absurde et l'isolement, centré sur Meursault, un homme détaché de la société.",
+              "cover": "img/L'Étranger.jpg",
+              "linkpdf": "https://www.comptoirlitteraire.com/docs/1002-camus-l-etranger-.pdf",
+              "author": {
+                "fullname": "Albert Camus",
+                "topographie": "Algérie"
+              },
+              "releaseDate": "1942-06-13"
+            },
+            {
+              "title": "Germinal",
+              "description": "Un roman naturaliste qui explore la vie des mineurs et les conflits sociaux dans une région minière française.",
+              "cover": "img/Germinal.jpg",
+              "linkpdf": "https://www.bibebook.com/files/ebook/libre/V2/zola_emile_-_germinal.pdf",
+              "author": {
+                "fullname": "Émile Zola",
+                "topographie": "France"
+              },
+              "releaseDate": "1885-03-04"
+            },
+            {
+              "title": "La Princesse de Clèves",
+              "description": "L'un des premiers romans psychologiques, explorant les dilemmes amoureux et moraux à la cour de France.",
+              "cover": "img/La Princesse de Clèves.jpg",
+              "linkpdf": "img/La Princesse de Clèves.jpg",
+              "author": {
+                "fullname": "Madame de La Fayette",
+                "topographie": "France"
+              },
+              "releaseDate": "1678-03-01"
+            },
+            {
+              "title": "Les Fleurs du mal",
+              "description": "Un recueil de poèmes explorant le beau, le mal, et les aspects sombres de l'âme humaine.",
+              "cover": "img/Les Fleurs du mal.jpg",
+              "linkpdf": "https://www.beq.ebooksgratuits.com/vents/Lafayette-princesse.pdf",
+              "author": {
+                "fullname": "Charles Baudelaire",
+                "topographie": "France"
+              },
+              "releaseDate": "1857-06-25"
+            },
+            {
+              "title": "Notre-Dame de Paris",
+              "description": "Une histoire d'amour tragique dans le Paris médiéval, avec Quasimodo, un sonneur de cloches difforme, au centre de l'intrigue.",
+              "cover": "img/Notre-Dame de Paris.jpg",
+              "linkpdf": "https://fr.wikisource.org/wiki/Notre-Dame_de_Paris/Texte_entier",
+              "author": {
+                "fullname": "Victor Hugo",
+                "topographie": "France"
+              },
+              "releaseDate": "1831-03-16"
+            }
+          
+          
+             ]
+            
+    }

@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+ body{
+   background-color: #B0B79A;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+   margin: 0;
+   padding: 0;
+
+}
+header {
+   display: flex;
+  justify-content: space-between;
+    padding: 2rem 2rem;
+    margin-top: -1%;
+   margin-left: -1%;
+    margin-right: -1%;
+    background-color: #ffffff; 
+}
+h1{
+  margin-top: 40px;
+  color: #0A1F7C;
+  margin-left: -400px;
+}
+
+.logo {
+    font-family: 'Italianno', cursive; 
+    font-size: 1,5rem;
+    color: white;
+    text-decoration: none;
+     height: 100px; 
+     width: 70px;
+}
+
+nav {
+    display: flex;
+    justify-content:flex-end;
+    gap: 9rem;
+    margin-right: 10%;
+}
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: opacity 10s;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav a:hover {
+  color: #92a2e6;
+}
+
+nav ul{
+  display: flex;
+  flex-wrap:wrap-reverse;
+  justify-content:space-around; 
+  align-items: center;
+  gap: 3rem;  
+  list-style-type: none;
+}
+
+nav img {
+width: 5px;
+height: 5px;
+margin-left: -40px;
+}
+
+
+.livres {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 48%; 
+  box-sizing: border-box;
+}
+
+#books-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  flex: 2;
+}
+
+.couverture {
+  width: 100px; 
+  height:5;
+
+}
+.texte h2 {
+  margin-bottom: 100px; 
+}
+
+.texte p {
+  margin-bottom: 5px; 
+}
+.informationLivre{
+  flex-direction:column ;
+  background-color: #E1D8BC;
+}
+.itemdetail{
+  display: flex; 
+  align-items:flex-start; 
+  background-color: #E6DCC0;
+ margin-top: 2%;
+}
+.divdetail{
+ display: flex;
+ flex-direction: column;
+ margin-left: 10px;
+ line-height: 0;
+ background-color:#FBF6E7 ;
+ padding: 10px;
+ margin-bottom:1%;
+ margin-top: 3.5%;
+ font-size: 20px;
+
+}
+.imgdetail{
+  height: 280px;
+}
+
+#buttondetail{
+    background-color:#586A84;
+    border-radius: 50%;
+  }
+  #ajouterBook{
+    background-color: white;
+    border-radius: 50%;
+  }
+#detailPdf{
+  background-color:#B0B79A;
+  padding: 5px 30px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(196, 13, 13, 0.3); /* Effet d'ombre */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 10%;
+}
+.buttonPdf{
+  margin-left:400px;
+   
+}
+
+div .image-header{
+  width: 100%;
+
+}
+.image-header img{
+  width: 100%;
+  height: 50vh;
+}
+.div1{
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+}
+
+#LivresFavorise{
+  flex: 1;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 48%;
+  background-color: #B0B79A;
+  margin-top: 10%;
+  margin-left: 10%;
+  border: none;
+}
+
+.favoriLivre{
+ margin-left: 5%;
+  margin-top: -1%;
+}
+.imgFavoris{
+width: 90%;
+}
+.buttonSupprimer{
+  margin-left: 5%;
+  border: 50%;
+  
+}
+
+.formBox{
+  display: flex;
+ margin-bottom: 10px;
+ background-color: #ffffff;
+ align-items: center;
+
+}
+.pdfFavorie{
+  margin-left: 70%;
+  margin-top: 20%;
+  border: 50%;
+
+}
+.container_image {
+  display: flex;
+  justify-content: space-around;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+.first_footer {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 200px;
+
+}
+.first_footer h3 {
+  color: #0A1F7C;
+  font-size: 30px;
+}
+.second_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+}
+summary {
+display: flex;
+align-items: center;
+justify-content: start;
+align-items: start;
+margin-left: 50px;
+flex-direction: column;
+}
+summary h2 {
+  display: flex;
+ justify-content: flex-start;
+ font-weight: bolder;
+}
+.contact {
+  float: right;
+  display: flex;
+ align-items: start;
+  flex-direction: column;
+  margin-right: 300px;
+  gap: 5px;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact .box {
+  display: flex;
+}
+.contact .box img {
+height: 20px;
+margin-right: 10px;
+width: 20px;
+}
+.contact .box h5 {
+  text-align: center;
+}
+summary p {
+  font-size: 20px ;
+  color: #0A1F7C;
+}
+.third_footer {
+  width:  100%;
+  height: 100px;
+  display: flex;
+}
+.third_footer img {
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin: 0 20px;
+}
+aside {
+  width: 100%;
+display: flex;
+justify-content: flex-end;
+}
+li{
+  text-decoration: none;
+}

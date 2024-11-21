@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livres Favoris</title>
+
+   <link rel="stylesheet" href="style.css">
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="./img/logo.jpg" alt="">
+        <h1>Le Coin Littéraire</h1>
+    
+    <nav>
+        <ul>  
+          <li><a href="index.html/">Liste</a ></li>
+          <!-- <li><a href="pages/detail.html">Détails</a></li> -->
+          <li><a href="favorie.html">Livres Favoris</a></li>
+        </ul>
+    </nav>
+    
+</header>
+
+    <div id="LivresFavorise">
+
+    </div>
+</body>
+<script >
+ const LivresFavorise = document.getElementById('LivresFavorise');  
+        const livre = JSON.parse(localStorage.getItem('favoris')) || [];
+         
+        for(let i=0;i<livre.length;i++) {
+        
+          const div = document.createElement('div')
+          div.innerHTML=`
+                 <h2>${livre[i].title}</h2>
+                  <p>Auteur: ${livre[i].author.fullname}</p>
+                  <p>description: ${livre[i].description}</p>
+                  <p>topographie: ${livre[i].author.topographie}</p>  
+                  <p>"Date de publication": ${livre[i].releaseDate}</p>  
+          `; 
+          const buttonPdf=document.createElement('p');
+            buttonPdf.innerHTML=`
+            <input id="detailPdf" class="pdfFavorie" type="button" value="PDF">
+            <button id="idSupprimer" class="buttonSupprimer" onclick="supprimerItem('${i}')"><img src="img/sup2.jpeg" alt=""></button>
+            `
+            // data-index est un attribut HTML personnalisé qui permet de stocker une valeur (ici, l'index d'un livre).
+            const bookImg = document.createElement('img');
+            bookImg.classList.add('imgdetail','itemdetail');  
+             bookImg.src = livre[i].cover;
+          LivresFavorise.appendChild(div);
+          LivresFavorise.appendChild(buttonPdf);  
+          LivresFavorise.appendChild(bookImg)
+         
+        }
+    
+    // else{
+    //     console.error(vvvvvvvvvvvvvvvv)
+    // }
+   // Fonction pour supprimer un livre
+function supprimerItem(index) {
+  // Supprimer l'élément du tableau
+  livre.splice(index, 1);
+
+  // Mettre à jour le localStorage
+  localStorage.setItem('favoris', JSON.stringify(livre));
+
+  // Réinitialiser l'affichage
+  afficherLivres();
+}
+
+// Réafficher les livres après une suppression
+function afficherLivres() {
+  LivresFavorise.innerHTML = ''; // Vider le conteneur
+  for (let i = 0; i < livre.length; i++) {
+    const div = document.createElement('div');
+    div.className= "formBox";
+
+          div.innerHTML=`
+                          <img class="imgFavoris" src="${livre[i].cover}" alt="Cover image"  > <!-- Ajouter l'image de couverture -->
+
+                 <div>
+                  <h2 class="favoriLivre">${livre[i].title}</h2>
+                  <p class="favorilivre">Auteur: ${livre[i].author.fullname}</p>
+                  <p class="favorilivre">description: ${livre[i].description}</p>
+                  <p class="favorilivre">topographie: ${livre[i].author.topographie}</p>  
+                  <p class="favorilivre">"Date de publication": ${livre[i].releaseDate}</p>  
+                  <input id="detailPdf" class="pdfFavorie" type="button" value="PDF">
+                <button id="idSupprimer" class="buttonSupprimer"  type="button" onclick="supprimerItem('${i}')""> suprime livre </button>
+                </div>
+          `
+          LivresFavorise.appendChild(div);
+          LivresFavorise.appendChild(buttonPdf);  
+       
+         
+  }
+
+  // Réattacher les événements aux nouveaux boutons
+  // const buttonsSupprimer = document.querySelectorAll('.buttonSupprimer');
+  // buttonsSupprimer.forEach((button) => {
+  //   button.addEventListener('click', (e) => {
+  //     const index = e.target.dataset.index; // Récupérer l'index
+  //     supprimerItem(index); // Appeler la fonction de suppression
+  //   });
+  // });
+}
+
+// Initialiser l'affichage
+afficherLivres();
+          
+</script>
+</html>
